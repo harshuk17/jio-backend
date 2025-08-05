@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f8fa;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .otp-box {
+      background-color: #f1f5f9;
+      font-size: 24px;
+      padding: 15px;
+      border-radius: 6px;
+      letter-spacing: 6px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h2 style="color: #4f46e5;">
+        JioCinema</h2>
+    </div>
+
+    <p>Hello <strong>{{userName}}</strong>,</p>
+
+    <p>Thank you for signing up. Please use the following OTP to verify your email address:</p>
+
+    <div class="otp-box">{{otp}}</div>
+
+    <p>This OTP is valid for the next 10 minutes. Do not share it with anyone.</p>
+
+    <p>If you didn’t request this, you can safely ignore this email.</p>
+
+    <p>Thanks,<br/>The jioCinema Team</p>
+
+    <div class="footer">
+      © 2025 jioCinema. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>

@@ -38,7 +38,7 @@ app.use(express.json());
 //   next();
 // });
 
-
+app.set("trust proxy", true); //render error
 app.use(helmet());
 app.use(morgan('dev'));
 

@@ -43,9 +43,28 @@ app.use(helmet());
 app.use(morgan('dev'));
 
 app.use(cors({
-  origin: 'jio-frontend-uk.vercel.app', // or '*' during development
+  origin: 'https://jio-frontend-uk.vercel.app',
   credentials: true
 }));
+
+
+// RESOLVEMENT OF CORS ISSUE 
+// const allowedOrigins = [
+//   'http://localhost:3000',
+//   'https://jio-frontend-uk.vercel.app'
+// ];
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true
+// }));
+
 
 const limiter = rateLimiter({
   windowMs: 15 * 60 * 1000,

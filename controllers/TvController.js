@@ -113,9 +113,9 @@ const getCrimeTvShows = async function(req,res){
 const getTvShowVideos = async function(req,res){
     try{
         const tvShowId= req.params.id;
-        console.log("tv-Show-Id",tvShowId);
+        // console.log("tv-Show-Id",tvShowId);
         const TvList = await getMediaList(TMDB_ENDPOINT.fetchTvShowVideos(tvShowId));
-        console.log("response of Tv list in backend",TvList);
+        // console.log("response of Tv list in backend",TvList);
         res.status(200).json({
             message:" TV show videos",
             TvList:TvList,

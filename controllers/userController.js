@@ -6,9 +6,9 @@ const express = require("express")
 
 const getCurrentUser = async function (req,res){
      try {
-        console.log("getCurrentUser is called");
+        // console.log("getCurrentUser is called");
         const userId = req.userId; // ✅ Correct way to access userId from middleware
-        console.log("userId", userId);
+        // console.log("userId", userId);
 
         const user = await userModel.findById(userId).lean(); // lean makes the query faster
 

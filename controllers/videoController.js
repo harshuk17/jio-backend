@@ -78,7 +78,7 @@ const getThumbnail = async (req, res) => {
         // if (!fs.existsSync(thumbnailPath)) {
         //    await generateThumbnailUtil(videoId)
         // }
-        console.log(thumbnailPath);
+        // console.log(thumbnailPath);
         // Send the thumbnail
         res.sendFile(thumbnailPath);
 

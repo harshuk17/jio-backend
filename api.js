@@ -46,6 +46,10 @@ app.use(cors({
   origin: 'https://jio-frontend-uk.vercel.app',
   credentials: true
 }));
+// app.use(cors({
+//   origin: 'https://localhost:3000',
+//   credentials: true
+// }));
 
 
 // RESOLVEMENT OF CORS ISSUE 

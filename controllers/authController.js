@@ -53,7 +53,7 @@ const loginHandler= async function(req,res){
 }
 const signupHandler = async (req, res) => {
     try {
-        console.log("signupHandler is called");
+        // console.log("signupHandler is called");
         const {name, email, password ,confirmPassword} = req.body;
         
         if (!email || !password) {
@@ -143,7 +143,7 @@ const forgetPasswordHandler = async function(req,res){
 }
 const resetPasswordHandler = async function(req,res){
     try{
-        console.log("reset password is called in backend")
+        // console.log("reset password is called in backend")
   
         const {email,password,confirmPassword,otp} = req.body;
       
@@ -209,7 +209,7 @@ const resetPasswordHandler = async function(req,res){
     }
 }
 const logoutHandler = async function(req,res){
-    console.log("logout in backend is called")
+    // console.log("logout in backend is called")
     res.cookie("jwtToken","",{
         maxAge: 0,
         httpOnly:true,
@@ -224,7 +224,7 @@ const logoutHandler = async function(req,res){
 // MIDLEWARE
 const protectRouteMiddleWare = async function (req, res, next) {
     try {
-        console.log("protect Route middleWare is called")
+        // console.log("protect Route middleWare is called")
         let jwtToken = req.cookies.jwtToken;
         // console.log("jwt token in backend ",jwtToken);
         if (!jwtToken) throw new Error("UnAuthorized!");

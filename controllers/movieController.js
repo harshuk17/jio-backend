@@ -107,10 +107,10 @@ const getAnimeMovies= async function(req,res){
 const getMovieVideos= async function(req,res){
     try{
         const {id} = req.params;
-        console.log("id of movie in backened",id);
+        // console.log("id of movie in backened",id);
         if(!id) throw new Error("video id not defined");
         const details = await getMediaList(TMDB_ENDPOINT.fetchMovieVideos(id));
-        console.log("details of movie",details)
+        // console.log("details of movie",details)
          if (!details) {
          return res.status(404).json({ error: "Movie not found" });
         }
@@ -128,10 +128,10 @@ const getMovieVideos= async function(req,res){
 const getMovieDetails= async function(req,res){
     try{
         const {id} = req.query;
-        console.log("id of movie in backened",id);
+        // console.log("id of movie in backened",id);
         if(!id) throw new Error("video id not defined");
         const details = await getMediaList(TMDB_ENDPOINT.fetchMovieDetails(id));
-        console.log("details of movie",details)
+        // console.log("details of movie",details)
          if (!details) {
          return res.status(404).json({ error: "Movie not found" });
         }

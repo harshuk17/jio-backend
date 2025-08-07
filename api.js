@@ -43,7 +43,7 @@ app.use(helmet());
 app.use(morgan('dev'));
 
 app.use(cors({
-  origin: 'http://localhost:3000', // or '*' during development
+  origin: 'jio-frontend-uk.vercel.app', // or '*' during development
   credentials: true
 }));
 

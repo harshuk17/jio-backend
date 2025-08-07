@@ -43,7 +43,7 @@ const getCurrentUser = async function (req,res){
 }
 const addToWishlist = async (req, res) => {
     try {
-        const userID = req.userID;
+        const {userID} = req.body;
         const { id, poster_path, name,media_type } = req.body;
         const user = await userModel.findById(userID);
         if (!user) {
